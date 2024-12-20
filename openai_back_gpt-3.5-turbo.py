@@ -14,7 +14,7 @@ def generate_ai_suggestions(input_text, num_suggestions=3):
     try:
         
         completion = client.chat.completions.create(
-            model="gpt-4o",  
+            model="gpt-3.5-turbo",  
             messages=[
                 {"role": "system", "content": "you are a text-generation model. You get the words from the user and generate the text which starts with the words given by the user. for example, if the user says 'How' you can generate the text like 'How are you?', 'How is your day going?','How old are you' etc."},
                 {"role": "user", "content": input_text}

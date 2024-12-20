@@ -21,4 +21,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Run the application
-CMD ["python", "openai_back_gpt-4o.py"]
+CMD ["python", "openai_back_gpt-3.5-turbo.py"]
