@@ -60,4 +60,4 @@ def get_first_prompt():
     return jsonify({'prompt': "Type something here..."})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int("8080"),debug=True)
