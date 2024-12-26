@@ -1,20 +1,26 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from openai import OpenAI
+from dotenv import load_dotenv
+from mistralai import Mistral
 import os
 
 app = Flask(__name__)
 CORS(app)
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  
+load_dotenv()
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  
+api_key = os.environ["MISTRAL_API_KEY"]
+print(api_key)
+
+# client = OpenAI(api_key=OPENAI_API_KEY)
+client = Mistral(api_key=api_key)
 
 def generate_ai_suggestions(input_text, num_suggestions=3):
     try:
         
-        completion = client.chat.completions.create(
-            model="gpt-3.5-turbo",  
+        completion = client.chat.complete(
+            model="mistral-large-latest",  
             messages=[
                 {"role": "system", "content": "you are a text-generation model. You get the words from the user and generate the text which starts with the words given by the user. for example, if the user says 'How' you can generate the text like 'How are you?', 'How is your day going?','How old are you' etc."},
                 {"role": "user", "content": input_text}
