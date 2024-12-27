@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from mistralai import Mistral
 import os
 
 app = Flask(__name__)
 CORS(app)
 
-load_dotenv()
+#load_dotenv()
 
 # OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  
 api_key = os.environ["MISTRAL_API_KEY"]
