@@ -21,4 +21,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Run the application
-CMD ["python", "MistralAI2.py"]
+CMD ["python", "groq_back.py"]
