@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from openai import OpenAI
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
 CORS(app)
 
-#load_dotenv()
+load_dotenv()
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
@@ -50,7 +50,7 @@ def suggest():
     user_input = data.get('input', '')
 
     if user_input:
-        ai_suggestions = generate_ai_suggestions(user_input, num_suggestions=3)
+        ai_suggestions = generate_ai_suggestions(user_input)
         return jsonify({'suggestions': ai_suggestions}) 
 
     return jsonify({'suggestions': []})
