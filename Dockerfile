@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Run the application
-CMD ["python", "groq_back_with_3_suggest.py"]
+CMD ["python", "pixtral-large_back_with_3_suggest.py"]
