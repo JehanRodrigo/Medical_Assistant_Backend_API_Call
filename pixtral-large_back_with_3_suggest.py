@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from mistralai import Mistral
 import os
 
-app = Flask(_name_)
+app = Flask(__name__)
 CORS(app)
 
 load_dotenv()
@@ -55,6 +55,6 @@ def suggest():
 def get_first_prompt():
     return jsonify({'prompt': "Type something here..."})
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(host="0.0.0.0", port=int("8080"),debug=True)
  
