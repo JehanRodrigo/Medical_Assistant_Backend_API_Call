@@ -1,6 +1,6 @@
 Google Cloud:
 
-Create Account
+* Create Account
 Cloud Build 
 Cloud Run
 CLI Configuration
