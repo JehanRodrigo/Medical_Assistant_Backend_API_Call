@@ -1,8 +1,8 @@
 Google Cloud:
 
 * Create Account
-Cloud Build 
-Cloud Run
+* Cloud Build 
+* Cloud Run
 CLI Configuration
 https://cloud.google.com/sdk/docs/install
 gcloud init
