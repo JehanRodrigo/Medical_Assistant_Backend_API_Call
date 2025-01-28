@@ -7,7 +7,7 @@ Google Cloud:
 * gcloud init
 * gcloud config set project <your_project_name>
 * gcloud auth login
-* gcloud artifacts repositories create deployementbiogpt --repository-format=docker --location=asia-south1 --description="<add_description>" --immutable-tags --async
+* gcloud artifacts repositories create <repo_rame_you_like> --repository-format=docker --location=asia-south1 --description="<add_description>" --immutable-tags --async
 * gcloud auth configure-docker asia-south1-docker.pkg.dev
 * gcloud builds submit --tag asia-south1-docker.pkg.dev/<project_ID>/<repo_name>/bioimg:biotag
 * Cloud Run
