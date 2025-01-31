@@ -9,5 +9,5 @@ Google Cloud:
 * gcloud auth login
 * gcloud artifacts repositories create <repo_rame_you_like> --repository-format=docker --location=asia-south1 --description="<add_description>" --immutable-tags --async
 * gcloud auth configure-docker asia-south1-docker.pkg.dev
-* gcloud builds submit --tag asia-south1-docker.pkg.dev/<project_ID>/<repo_name>/<Image>img:<Tag>tag
+* gcloud builds submit --tag asia-south1-docker.pkg.dev/<project_ID>/<repo_name>/<Imagename>img:<Tag>tag
 * Cloud Run
