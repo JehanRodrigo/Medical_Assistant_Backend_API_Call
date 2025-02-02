@@ -1,7 +1,7 @@
 Adding Python Backend to the Google Cloud Platform:
 
 * Create Google Cloud Platform Account
-* Cloud Build 
+* Check Cloud Build Status 
 * CLI Configuration
 * https://cloud.google.com/sdk/docs/install
 * gcloud init
